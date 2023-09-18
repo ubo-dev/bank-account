@@ -1,5 +1,6 @@
-package com.ubo.account.dto;
+package com.ubo.account.dto.converter;
 
+import com.ubo.account.dto.AccountDto;
 import com.ubo.account.model.Account;
 import org.springframework.stereotype.Component;
 

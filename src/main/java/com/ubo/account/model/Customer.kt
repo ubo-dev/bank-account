@@ -13,8 +13,8 @@ data class Customer(
         val name: String?,
         val surname: String?,
 
-        @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
-        val account: Set<Account>?
+        @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER)
+        val accounts: Set<Account>?
 ) {
         override fun equals(other: Any?): Boolean {
                 if (this === other) return true
@@ -25,7 +25,7 @@ data class Customer(
                 if (id != other.id) return false
                 if (name != other.name) return false
                 if (surname != other.surname) return false
-                if (account != other.account) return false
+                if (accounts != other.accounts) return false
 
                 return true
         }
