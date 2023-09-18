@@ -10,7 +10,6 @@ data class Customer(
         @GeneratedValue(generator = "UUID")
         @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
         val id: String?,
-
         val name: String?,
         val surname: String?,
 

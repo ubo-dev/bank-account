@@ -46,4 +46,5 @@ data class Account(
                 result = 31 * result + (customer?.hashCode() ?: 0)
                 return result
         }
+
 }
