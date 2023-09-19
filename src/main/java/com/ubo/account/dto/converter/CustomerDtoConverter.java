@@ -36,7 +36,7 @@ public class CustomerDtoConverter {
                 Objects.requireNonNull(from.getAccounts())
                         .stream()
                         .map(customerAccountDtoConverter::convert)
-                        .collect(Collectors.toSet()));
+                        .collect(Collectors.toSet())
         );
     }
 }
