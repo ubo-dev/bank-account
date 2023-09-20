@@ -2,12 +2,11 @@ package com.ubo.account.controller;
 
 import com.ubo.account.dto.AccountDto;
 import com.ubo.account.dto.CreateAccountRequest;
-import com.ubo.account.model.Account;
 import com.ubo.account.service.AccountService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @RestController
 @RequestMapping("/v1/account")
@@ -20,7 +19,7 @@ public class AccountController {
    }
 
     @PostMapping()
-    public ResponseEntity<AccountDto> createAccount(@RequestBody CreateAccountRequest createAccountRequest) {
+    public ResponseEntity<AccountDto> createAccount(@RequestBody @Valid CreateAccountRequest createAccountRequest) {
         return ResponseEntity.ok(accountService.createAccount(createAccountRequest));
     }
 
