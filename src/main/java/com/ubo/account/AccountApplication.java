@@ -11,6 +11,9 @@ public class AccountApplication implements CommandLineRunner {
 		SpringApplication.run(AccountApplication.class, args);
 	}
 
+
+
+
 	@Override
 	public void run(String... args) throws Exception {
 
